@@ -1,0 +1,35 @@
+<div class="container-fluid space-theme">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="https://listcarbrands.com/wp-content/uploads/{{brandLogo}}" class="img-fluid brand-logo" alt="Brand Logo">
+        </div>
+        <div class="col-md-5 p-5 bg-dark text-light rounded d-flex align-items-center">
+            <div>
+                <h1 class="display-4 mb-4">Esplora le auto {{brand}}</h1>
+                <p class="lead">Scopri la nostra selezione di auto di alta qualità. Siamo qui per soddisfare tutte le tue esigenze di mobilità.</p>
+                <button class="btn btn-primary btn-lg">Scopri di più</button>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="col-12 d-flex justify-content-center">
+            <div class="card-deck">
+                <div class="card border-0 bg-transparent space-card" *ngFor="let auto of autos">
+                    <img src="https://www.kimballstock.com/pix/car/p/{{auto.modelImage}}" class="card-img-top" alt="{{auto.brand}} {{auto.model}}">
+                    <div class="card-body">
+                        <h5 class="card-title text-light">{{auto.brand}} {{auto.model}}</h5>
+                        <p class="card-text">
+                            <span class="badge bg-primary text-uppercase">Anno: {{auto.year}}</span>
+                            <span class="badge bg-primary text-uppercase">Prezzo: {{auto.price}}</span>
+                            <span *ngIf="auto.available; else elseSpan" class="badge bg-success text-uppercase">Pronta consegna: sì</span>
+                            <ng-template #elseSpan>
+                                <span class="badge bg-danger text-uppercase">Pronta consegna: no</span>
+                            </ng-template>
+                        </p>
+                        <a href="#" class="btn btn-outline-info">Dettagli</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

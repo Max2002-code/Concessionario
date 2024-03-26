@@ -1,0 +1,79 @@
+/* Custom CSS for enhanced styling */
+.brand-logo {
+    max-width: 100%;
+    height: auto;
+}
+
+.card-columns {
+    column-count: 3;
+}
+
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1.2rem;
+}
+
+.badge {
+    margin-right: 10px;
+}
+
+@media (max-width: 992px) {
+    .card-columns {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-columns {
+        column-count: 1;
+    }
+}
+
+/* Aggiungiamo un po' di grafica */
+.space-theme {
+    background-color: #222;
+    padding: 50px 0;
+}
+
+.brand-logo {
+    max-width: 100%;
+    height: auto;
+}
+
+.space-card {
+    border: 2px solid #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.space-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.card-text .badge {
+    margin-right: 5px;
+}
+

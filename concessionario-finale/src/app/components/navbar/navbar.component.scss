@@ -1,0 +1,95 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+.container-fluid {
+    padding: 0;
+}
+.jumbotron {
+    background-image: url('https://source.unsplash.com/1600x900/?cars');
+    background-size: cover;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 100px 0;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+.jumbotron h1 {
+    font-size: 3.5rem;
+}
+.jumbotron p {
+    font-size: 1.5rem;
+}
+.navbar {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    background-color: #343a40;
+}
+.navbar-brand img {
+    height: 50px; /* Adjust height as needed */
+}
+.nav-link {
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    color: #ffffff !important;
+}
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.dropdown-menu {
+    background-color: #343a40;
+}
+.dropdown-item {
+    color: #ffffff;
+}
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.nav-item {
+    margin-right: 10px;
+}
+.nav-link.active {
+    font-weight: bold;
+}
+.dropdown-toggle::after {
+    display: none;
+}
+.card {
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: #007bff;
+}
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+}
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: #0056b3;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-image: none;
+}
+.bg-success {
+    background-color: #28a745 !important;
+}
+.bg-danger {
+    background-color: #dc3545 !important;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}

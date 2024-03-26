@@ -1,0 +1,148 @@
+<div class="container-fluid text-center">
+    <div>
+        <h3 class="text-center">I nostri marchi</h3>
+        <!-- Carousel per i marchi -->
+        <div id="carouselBrands" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <ul class="d-flex justify-content-center">
+                        <li *ngFor="let brand of brands.slice(0, 3)" class="list-unstyled">
+                            <a [routerLink]="['/brand', brand]" routerLinkActive="active">
+                                <img src="https://listcarbrands.com/wp-content/uploads/{{brand}}" width="50%">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="carousel-item">
+                    <ul class="d-flex justify-content-center">
+                        <li *ngFor="let brand of brands.slice(0, 3)" class="list-unstyled">
+                            <a [routerLink]="['/brand', brand]" routerLinkActive="active">
+                                <img src="https://listcarbrands.com/wp-content/uploads/{{brand}}" width="50%">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselBrands" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselBrands" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <hr>
+    <div>
+        <h3 class="text-center">Auto in evidenza</h3>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" *ngFor="let random of randomAuto">
+                    <div class="row">
+                        <div class="col-4 d-flex justify-content-center">
+                            <div class="card" style="width: 18rem;" [ngClass]="{
+                                'bg-success': random.available,
+                                'bg-danger': !random.available
+                            }">
+                                <img src="https://www.kimballstock.com/pix/car/p/{{random.modelImage}}"
+                                    class="card-img-top"
+                                    alt="{{random.brand}} {{random.model}}">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{random.brand}} {{random.model}}
+                                    </h5>
+                                    <p class="card-text">
+                                        <span class="badge bg-primary me-1 text-uppercase">Anno:
+                                            {{random.year}}</span>
+                                        <span class="badge bg-primary me-1 text-uppercase">Prezzo:
+                                            {{random.price}}</span>
+                                        <span *ngIf="random.available; else elseSpan"
+                                            class="badge bg-primary me-1 text-uppercase">Pronta
+                                            consegna: sì</span>
+                                        <ng-template #elseSpan>
+                                            <span class="badge bg-primary me-1 text-uppercase">Pronta
+                                                consegna: no</span>
+                                        </ng-template>
+                                    </p>
+                                    <a [routerLink]="['/' + random.brand.toLowerCase()]"
+                                        class="btn btn-primary">Tutte le nostre
+                                        {{random.brand}}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 d-flex justify-content-center">
+                            <div class="card" style="width: 18rem;" [ngClass]="{
+                                'bg-success': random.available,
+                                'bg-danger': !random.available
+                            }">
+                                <img src="https://www.kimballstock.com/pix/car/p/{{random.modelImage}}"
+                                    class="card-img-top"
+                                    alt="{{random.brand}} {{random.model}}">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{random.brand}} {{random.model}}
+                                    </h5>
+                                    <p class="card-text">
+                                        <span class="badge bg-primary me-1 text-uppercase">Anno:
+                                            {{random.year}}</span>
+                                        <span class="badge bg-primary me-1 text-uppercase">Prezzo:
+                                            {{random.price}}</span>
+                                        <span *ngIf="random.available; else elseSpan"
+                                            class="badge bg-primary me-1 text-uppercase">Pronta
+                                            consegna: sì</span>
+                                        <ng-template #elseSpan>
+                                            <span class="badge bg-primary me-1 text-uppercase">Pronta
+                                                consegna: no</span>
+                                        </ng-template>
+                                    </p>
+                                    <a [routerLink]="['/' + random.brand.toLowerCase()]"
+                                        class="btn btn-primary">Tutte le nostre
+                                        {{random.brand}}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 d-flex justify-content-center">
+                            <div class="card" style="width: 18rem;" [ngClass]="{
+                                'bg-success': random.available,
+                                'bg-danger': !random.available
+                            }">
+                                <img src="https://www.kimballstock.com/pix/car/p/{{random.modelImage}}"
+                                    class="card-img-top"
+                                    alt="{{random.brand}} {{random.model}}">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{random.brand}} {{random.model}}
+                                    </h5>
+                                    <p class="card-text">
+                                        <span class="badge bg-primary me-1 text-uppercase">Anno:
+                                            {{random.year}}</span>
+                                        <span class="badge bg-primary me-1 text-uppercase">Prezzo:
+                                            {{random.price}}</span>
+                                        <span *ngIf="random.available; else elseSpan"
+                                            class="badge bg-primary me-1 text-uppercase">Pronta
+                                            consegna: sì</span>
+                                        <ng-template #elseSpan>
+                                            <span class="badge bg-primary me-1 text-uppercase">Pronta
+                                                consegna: no</span>
+                                        </ng-template>
+                                    </p>
+                                    <a [routerLink]="['/' + random.brand.toLowerCase()]"
+                                        class="btn btn-primary">Tutte le nostre
+                                        {{random.brand}}</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,84 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" [routerLink]="['/']">
+            <img src="../../../assets/img/logo.png" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" [routerLink]="['/']" routerLinkActive="active"
+                       [routerLinkActiveOptions]="{exact:true}">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-car"></i> Marchi
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" [routerLink]="['/fiat']" routerLinkActive="active"><i class="fas fa-car"></i> Fiat</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/ford']" routerLinkActive="active"><i class="fas fa-car"></i> Ford</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/audi']" routerLinkActive="active"><i class="fas fa-car"></i> Audi</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="jumbotron text-center" style="background-image: url('background.jpg'); background-size: cover;">
+    <div class="container text-light">
+        <img src="../../../assets/img/logo.png">
+        <h1 class="display-3 text-dark">L'Autosalone Creato per i Tuoi Bisogni</h1>
+        <p class="lead text-dark">Trova la tua auto perfetta oggi stesso!</p>
+        <a href="#" class="btn btn-primary btn-lg mt-3">Esplora le Auto</a>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Carousel for featured cars -->
+    <div id="carouselFeaturedCars" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <!-- First card -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <!-- Card content goes here -->
+                        </div>
+                    </div>
+                    <!-- Second card -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <!-- Card content goes here -->
+                        </div>
+                    </div>
+                    <!-- Third card -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <!-- Card content goes here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more carousel items if needed -->
+        </div>
+        <!-- Carousel controls -->
+        <a class="carousel-control-prev" href="#carouselFeaturedCars" role="button" data-slide="prev">
+        </a>
+        <a class="carousel-control-next" href="#carouselFeaturedCars" role="button" data-slide="next">
+        </a>
+    </div>
+
+    <!-- Additional text content -->
+    <div class="row mt-5">
+        <div class="col-md-8 offset-md-2">
+            <p class="lead text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et urna id purus lacinia pulvinar vel nec nulla. Sed venenatis leo in dui lobortis, vel efficitur justo facilisis. Nullam non nulla sed metus luctus vehicula ut non metus.</p>
+        </div>
+    </div>
+</div>
