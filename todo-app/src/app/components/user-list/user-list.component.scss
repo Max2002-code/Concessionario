@@ -1,0 +1,37 @@
+/* Stili per il container principale */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Stili per l'intestazione */
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Stili per la lista degli utenti */
+.user-list {
+  list-style: none;
+  padding: 0;
+}
+
+/* Stili per ogni elemento utente */
+.user-item {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Stili per i dettagli dell'utente */
+.user-details {
+  margin-left: 20px;
+}
+
+/* Stili per il messaggio se non ci sono utenti */
+.no-users-message {
+  font-style: italic;
+  color: #888;
+}
