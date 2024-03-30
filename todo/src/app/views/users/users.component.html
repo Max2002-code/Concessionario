@@ -1,0 +1,17 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <!-- Utilizzo della direttiva *ngFor per visualizzare ogni utente -->
+      <div class="card mb-3" *ngFor="let user of users">
+        <div class="card-body bg-light rounded shadow user-card">
+          <!-- Componente per visualizzare le informazioni dell'utente -->
+          <app-single-user [user]="user"></app-single-user>
+          <!-- Aggiunta di un'icona per eliminare l'utente -->
+          <button class="btn btn-danger btn-sm mt-2" (click)="deleteUser(user.id)">
+            <i class="fas fa-trash"></i> Elimina
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

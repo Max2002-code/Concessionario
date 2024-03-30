@@ -1,0 +1,18 @@
+<div class="container my-5">
+  <h1 class="text-center mb-5">Hey Boss, what's my task for the day?</h1>
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-4 mb-4">
+      <a [routerLink]='["/done"]' class="btn btn-primary w-100">See how much we've accomplished!</a>
+    </div>
+    <div class="col-md-6 col-lg-4 mb-4">
+      <a [routerLink]='["/todo"]' class="btn btn-primary w-100">What's left?</a>
+    </div>
+    <div class="col-md-6 col-lg-4 mb-4">
+      <a [routerLink]='["/users"]' class="btn btn-primary w-100">By user</a>
+    </div>
+    <div class="col-md-6 col-lg-4 mb-4">
+      <a [routerLink]='["/"]' class="btn btn-primary w-100">See all</a>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,5 @@
+<div class="d-flex flex-column gap-2 mt-5 p-3 border rounded shadow align-items-center">
+  <div *ngFor="let todo of todos" class="d-flex align-items-center justify-content-between bg-light p-3 rounded">
+    <app-single-todo [todo]="todo"></app-single-todo>
+  </div>
+</div>

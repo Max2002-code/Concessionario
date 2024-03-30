@@ -1,0 +1,9 @@
+<div class="d-flex flex-column gap-2 mt-5 p-3 border rounded shadow">
+  <!-- Input per inserire il nome -->
+  <div class="input-group">
+    <input type="text" class="form-control bg-light rounded-start" placeholder="Enter your name here" [(ngModel)]="query">
+    <button class="btn btn-outline-secondary bg-light rounded-end" type="button">Search</button>
+  </div>
+  <!-- Componente dei Todos -->
+  <app-todos [query]="query"></app-todos>
+</div>
