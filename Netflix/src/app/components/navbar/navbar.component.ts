@@ -1,15 +1,27 @@
-import { Component } from '@angular/core';
-import { AuthServiceService } from 'src/app/auth-service.service';
+import { Component, OnInit } from '@angular/core';
+import { Auth } from 'src/app/auth/auth.interface';
+import { AuthService } from 'src/app/auth/auth.service';
+import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+    selector: 'app-navbar',
+    templateUrl: './navbar.component.html',
+    styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent {
-  constructor(private authServiceService: AuthServiceService) { }
+export class NavbarComponent implements OnInit {
 
-  isLoggedIn(): boolean {
-    return this.authServiceService.isLoggedIn();
-  }
+    isMenuCollapsed = true;
+    utente!: Auth | null;
+
+    constructor(private authSrv: AuthService) {}
+
+    ngOnInit(): void {
+        this.authSrv.user$.subscribe((_utente) => {
+            this.utente = _utente;
+        });
+    }
+
+    logout() {
+        this.authSrv.logout();
+    }
 }
